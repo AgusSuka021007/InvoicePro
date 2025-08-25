@@ -30,9 +30,9 @@
 
             <!-- Sign In Button -->
             <div class="hidden md:block">
-                <button class="bg-white text-purple-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                <a  href="{{ route('login') }}" class="bg-white text-purple-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
                     Sign In
-                </button>
+                </a>
             </div>
 
             <!-- Mobile Menu Button -->
