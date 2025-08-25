@@ -22,10 +22,10 @@
         </div>
 
         <!-- Navigation Links -->
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="#" class="text-white hover:text-purple-200 transition-colors">Home</a>
-            <a href="#" class="text-white hover:text-purple-200 transition-colors">Feature</a>
-            <a href="#" class="text-white hover:text-purple-200 transition-colors">Contact</a>
+        <div class="hidden md:flex items-end space-x-8">
+            <a href="{{ route('home') }}" class="text-white hover:text-purple-200 transition-colors">Home</a>
+            <a href="{{ route('feature') }}" class="text-white hover:text-purple-200 transition-colors">Feature</a>
+            <a href="{{ route('contact') }}" class="text-white hover:text-purple-200 transition-colors">Contact</a>
         </div>
 
         <!-- Sign In Button -->
