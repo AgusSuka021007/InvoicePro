@@ -43,4 +43,37 @@ Route::get('/reject', function () {
     return view('admin.reject');
 })->name('reject');
 
+
+//Dashboards Utama
+Route::get('/owner', function () {
+    return view('dashboard.owner');
+})->name('owner');
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+})->name('admin');
+
+Route::get('/ownernavbar', function () {
+    return view('layouts.ownernavbar');
+})->name('ownernavbar');
+
+Route::get('/adminnavbar', function () {
+    return view('layouts.adminnavbar');
+})->name('adminnavbar');
+
+
+//Products
+Route::get('/index', function () {
+    return view('products.index');
+})->name('index');
+
+
+//Customers
+Route::get('/customerdb', function () {
+    return view('customers.customerdb');
+})->name('customerdb');
+
+
+
+
 //I LOVE LARAVEL❤️❤️
