@@ -74,7 +74,7 @@
 
                 <!-- Back Link -->
                 <div class="text-center">
-                    <a href="{{ route('company.registration') }}" class="inline-flex items-center text-purple-600 hover:text-purple-700 text-sm font-medium transition-colors duration-200">
+                    <a href="{{ route('company-code') }}" class="inline-flex items-center text-purple-600 hover:text-purple-700 text-sm font-medium transition-colors duration-200">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                         </svg>

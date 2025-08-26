@@ -43,4 +43,12 @@ Route::get('/reject', function () {
     return view('admin.reject');
 })->name('reject');
 
+Route::get('/company-basic-info', function () {
+    return view('owner.company-basic-info');
+})->name('company-basic-info');
+
+Route::get('/company-info-advance', function () {
+    return view('owner.company-info-advance');
+})->name('company-info-advance');
+
 //I LOVE LARAVEL❤️❤️
