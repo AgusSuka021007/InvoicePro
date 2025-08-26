@@ -38,4 +38,9 @@ Route::get('/company-code', function () {
 Route::get('/queue', function () {
     return view('admin.queue');
 })->name('queue');
+
+Route::get('/reject', function () {
+    return view('admin.reject');
+})->name('reject');
+
 //I LOVE LARAVEL❤️❤️
