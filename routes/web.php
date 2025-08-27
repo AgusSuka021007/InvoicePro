@@ -63,15 +63,45 @@ Route::get('/adminnavbar', function () {
 
 
 //Products
-Route::get('/index', function () {
-    return view('products.index');
-})->name('index');
+Route::get('product', function () {
+    return view('products.product');
+})->name('product');
+
+Route::get('product/create', function () {
+    return view('products.create');
+})->name('product/create');
+
+Route::get('product/edit', function () {
+    return view('products.edit');
+})->name('product/edit');
 
 
 //Customers
-Route::get('/customerdb', function () {
-    return view('customers.customerdb');
-})->name('customerdb');
+Route::get('/customer', function () {
+    return view('customers.customer');
+})->name('customer');
+
+Route::get('/customer/create', function () {
+    return view('customers.create');
+})->name('/customer/create');
+
+Route::get('/customer/edit', function () {
+    return view('customers.edit');
+})->name('/customer/edit');
+
+
+//Invoices
+Route::get('/invoice', function () {
+    return view('invoices.invoice');
+})->name('invoice');
+
+Route::get('/customer/create', function () {
+    return view('customers.create');
+})->name('/customer/create');
+
+Route::get('/customer/edit', function () {
+    return view('customers.edit');
+})->name('/customer/edit');
 
 
 

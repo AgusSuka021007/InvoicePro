@@ -1,7 +1,7 @@
 @extends('layouts.adminnavbar')
 
-@section('title', 'Customers')
-@section('page-title', 'Customers')
+@section('title', 'Products')
+@section('page-title', 'Products')
 
 @section('content')
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customers Page - Invoice System</title>
+    <title>Product Page - Invoice System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes slideUp {
@@ -96,7 +96,7 @@
                 </button>
                 
                 <!-- Title -->
-                <h1 class="text-3xl font-bold text-white slide-up">Customers</h1>
+                <h1 class="text-3xl font-bold text-white slide-up">Product</h1>
             </div>
             
             <!-- Search and Notification -->
@@ -124,8 +124,8 @@
         </div>
         
         <!-- Stats Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <!-- Total Customers Card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Total Products Card -->
             <div class="bg-white rounded-2xl p-6 shadow-xl hover-lift group slide-up">
                 <div class="flex items-center space-x-4">
                     <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -133,26 +133,7 @@
                     </div>
                     <div>
                         <div class="text-4xl font-bold text-indigo-600 counter" data-count="156">0</div>
-                        <div class="text-gray-600 font-semibold text-lg">Total Customers</div>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center text-sm text-green-600">
-                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="font-medium">+12% from last month</span>
-                </div>
-            </div>
-
-                        <!-- Active Customers Card -->
-            <div class="bg-white rounded-2xl p-6 shadow-xl hover-lift group slide-up">
-                <div class="flex items-center space-x-4">
-                    <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <span class="text-3xl">📦</span>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-indigo-600 counter" data-count="156">0</div>
-                        <div class="text-gray-600 font-semibold text-lg">Active Customers</div>
+                        <div class="text-gray-600 font-semibold text-lg">Total Products</div>
                     </div>
                 </div>
                 <div class="mt-4 flex items-center text-sm text-green-600">
@@ -173,7 +154,7 @@
                     </div>
                     <div>
                         <div class="text-4xl font-bold text-indigo-600 counter" data-count="142">0</div>
-                        <div class="text-gray-600 font-semibold text-lg">Avg. Customer Value</div>
+                        <div class="text-gray-600 font-semibold text-lg">In Stock Products</div>
                     </div>
                 </div>
                 <div class="mt-4 flex items-center text-sm text-green-600">
@@ -190,13 +171,15 @@
             <!-- Top Section -->
             <div class="p-6 border-b border-gray-100">
                 <div class="flex items-center justify-between">
+                    <a href="product/create">
                     <button onclick="openCustomerModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2 group">
                         <span class="text-lg">📋</span>
-                        <span>Add New Customer</span>
+                        <span>Add New Product</span>
                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </button>
+    </a>
                     
                     <!-- Filter Dropdown -->
                     <div class="relative">
@@ -225,17 +208,9 @@
                     <div class="w-32 h-32 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mb-8 bounce-in shadow-2xl">
                         <span class="text-6xl">📦</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-indigo-600 mb-4 slide-up" style="animation-delay: 0.3s;">There is no Customer Available Create one</h3>
-                    <p class="text-gray-500 mb-8 text-center max-w-md slide-up" style="animation-delay: 0.4s;">Get started by creating your first Customer</p>
-                    <button onclick="openProductModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 group slide-up" style="animation-delay: 0.5s;">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                        </svg>
-                        <span>Create Your First Customer</span>
-                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+                    <h3 class="text-2xl font-bold text-indigo-600 mb-4 slide-up" style="animation-delay: 0.3s;">There is no Product Available Create one</h3>
+                    <p class="text-gray-500 mb-8 text-center max-w-md slide-up" style="animation-delay: 0.4s;">Get started by creating your first product. You can add details like name, price, and stock quantity.</p>
+                    
                 </div>
                 
                 <!-- Products Table (Initially Hidden) -->
@@ -262,85 +237,7 @@
         </div>
     </div>
     
-    <!-- Add New Customer Modal -->
-    <div id="customerModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-all duration-300 shadow-2xl">
-            <div class="flex items-center justify-between mb-6">
-                <h3 class="text-2xl font-bold text-gray-800 flex items-center space-x-2">
-                    <span class="text-2xl">👤</span>
-                    <span>Add New Customer</span>
-                </h3>
-                <button onclick="closeCustomerModal()" class="text-gray-400 hover:text-gray-600 transition-all duration-200 hover:scale-110">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <form id="customerForm" class="space-y-4">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                    <input type="text" id="customerName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                    <input type="email" id="customerEmail" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                    <input type="tel" id="customerPhone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Address</label>
-                    <input type="tel" id="customerPhone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div class="flex justify-end space-x-3 pt-6">
-                    <button type="button" onclick="closeCustomerModal()" class="px-6 py-2 text-gray-600 hover:text-gray-800 transition-colors duration-200 font-medium">Cancel</button>
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg">Save Customer</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <!-- Create Product Modal -->
-    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-all duration-300 shadow-2xl">
-            <div class="flex items-center justify-between mb-6">
-                <h3 class="text-2xl font-bold text-gray-800 flex items-center space-x-2">
-                    <span class="text-2xl">🛍️</span>
-                    <span>Create New Product</span>
-                </h3>
-                <button onclick="closeProductModal()" class="text-gray-400 hover:text-gray-600 transition-all duration-200 hover:scale-110">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <form id="productForm" class="space-y-4">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Product Name</label>
-                    <input type="text" id="productName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">SKU</label>
-                    <input type="text" id="productSku" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Price (IDR)</label>
-                    <input type="number" id="productPrice" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Stock Quantity</label>
-                    <input type="number" id="productStock" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                </div>
-                <div class="flex justify-end space-x-3 pt-6">
-                    <button type="button" onclick="closeProductModal()" class="px-6 py-2 text-gray-600 hover:text-gray-800 transition-colors duration-200 font-medium">Cancel</button>
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg">Create Product</button>
-                </div>
-            </form>
-        </div>
-    </div>
+
     
     <!-- Toast Notification -->
     <div id="toast" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-all duration-300 z-50">
