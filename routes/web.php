@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,5 +51,65 @@ Route::get('/company-basic-info', function () {
 Route::get('/company-info-advance', function () {
     return view('owner.company-info-advance');
 })->name('company-info-advance');
+
+//Dashboards Utama
+Route::get('/owner', function () {
+    return view('dashboard.owner');
+})->name('owner');
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+})->name('admin');
+
+Route::get('/ownernavbar', function () {
+    return view('layouts.ownernavbar');
+})->name('ownernavbar');
+
+Route::get('/adminnavbar', function () {
+    return view('layouts.adminnavbar');
+})->name('adminnavbar');
+
+//Products
+Route::get('/index', function () {
+    return view('products.index');
+})->name('index');
+
+//Customers
+Route::get('/customerdb', function () {
+    return view('customers.customerdb');
+})->name('customerdb');
+
+//Category
+Route::get('/category', function () {
+    return view('category.category');
+})->name('category');
+
+Route::get('/category/create', function () {
+    return view('category.create');
+})->name('category.create');
+
+Route::get('/category/edit', function () {
+    return view('category.edit');
+})->name('category.edit');
+
+
+//Task
+Route::get('/task', function () {
+    return view('Task.task');
+})->name('task');
+
+Route::get('/task/create', function () {
+    return view('Task.create');
+})->name('task.create');
+
+Route::get('/task/edit', function () {
+    return view('Task.edit');
+})->name('task.edit');
+
+
+//Settings 
+Route::get('/settings', function () {
+    return view('settings.settings');
+})->name('settings');
 
 //I LOVE LARAVEL❤️❤️
