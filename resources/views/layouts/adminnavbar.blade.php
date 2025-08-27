@@ -145,7 +145,7 @@
                     Invoices
                 </a>
                 
-                <a href="customer" class="flex items-center px-4 py-3 bg-gray-200 text-black/80 hover:text-white/80 hover:bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 rounded-lg transition-colors">
+                <a href="#" class="flex items-center px-4 py-3 bg-gray-200 text-black/80 hover:text-white/80 hover:bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 rounded-lg transition-colors">
                     <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
                     </svg>
@@ -159,14 +159,14 @@
                     Products
                 </a>
                 
-                <a href="category" class="flex items-center px-4 py-3 bg-gray-200 text-black/80 hover:text-white/80 hover:bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 rounded-lg transition-colors">
+                <a href="#" class="flex items-center px-4 py-3 bg-gray-200 text-black/80 hover:text-white/80 hover:bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 rounded-lg transition-colors">
                     <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
                     </svg>
                     Category
                 </a>
                 
-                <a href="task" class="flex items-center px-4 py-3 bg-gray-200 text-black/80 hover:text-white/80 hover:bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 rounded-lg transition-colors">
+                <a href="#" class="flex items-center px-4 py-3 bg-gray-200 text-black/80 hover:text-white/80 hover:bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 rounded-lg transition-colors">
                     <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                         <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h8v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm8 8a1 1 0 01-1-1V8a1 1 0 10-2 0v4a3 3 0 003 3h2a1 1 0 100-2h-2z"/>
